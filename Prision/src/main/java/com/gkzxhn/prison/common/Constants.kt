@@ -38,31 +38,31 @@ object Constants {
 
     /*-------------------------------request url-------------------------------------------------*/
     val IS_TEST_MODEL=true //是否为自动化测试模式，发布时需设置为false
-
-    val RELEASE_DOMAIN = "https://www.yuwugongkai.com/ywgk-app"//新发布正式环境
-    val DEMO_DOMAIN = "http://120.79.251.238:8022/ywgk-app" //"http://120.78.190.101:8084/ywgk-app-demo"//演示环境
+    var Select_DOMAIN =""
+    var RELEASE_DOMAIN = "https://www.yuwugongkai.com/ywgk-app"//新发布正式环境
+    var DEMO_DOMAIN = "http://120.79.251.238:8022/ywgk-app" //"http://120.78.190.101:8084/ywgk-app-demo"//演示环境
     val DEV_DOMAIN = "http://120.78.190.101:8086/ywgk-app-auth"//开发环境
-    val DOMAIN_NAME = DEMO_DOMAIN
+    var DOMAIN_NAME = DEMO_DOMAIN
 
-    val REQUEST_MEETING_LIST_URL = DOMAIN_NAME + "/api/meetings/getMeetingsForPrison"//会见列表
-    val REQUEST_CANCEL_MEETING_URL = DOMAIN_NAME + "/api/meetings/update"// 取消会见
-    val REQUEST_MEETING_DETAIL_URL = DOMAIN_NAME + "/api/families/detail"// 会见详情
-    val REQUEST_MEETING_MEMBERS_URL = DOMAIN_NAME + "/api/jails/meetingMembers"// 查询会见家属
-    val REQUEST_VERSION_URL = DOMAIN_NAME + "/api/versions/page"//版本更新
-    val REQUEST_CRASH_LOG_URL = DOMAIN_NAME + "/app_loggers/save"//奔溃日志
-    val REQUEST_MEETING_ROOM = DOMAIN_NAME + "/api/terminals/detail"//会议室信息
+    var REQUEST_MEETING_LIST_URL = DOMAIN_NAME + "/api/meetings/getMeetingsForPrison"//会见列表
+    var REQUEST_CANCEL_MEETING_URL = DOMAIN_NAME + "/api/meetings/update"// 取消会见
+    var REQUEST_MEETING_DETAIL_URL = DOMAIN_NAME + "/api/families/detail"// 会见详情
+    var REQUEST_MEETING_MEMBERS_URL = DOMAIN_NAME + "/api/jails/meetingMembers"// 查询会见家属
+    var REQUEST_VERSION_URL = DOMAIN_NAME + "/api/versions/page"//版本更新
+    var REQUEST_CRASH_LOG_URL = DOMAIN_NAME + "/app_loggers/save"//奔溃日志
+    var REQUEST_MEETING_ROOM = DOMAIN_NAME + "/api/terminals/detail"//会议室信息
 
-    val REQUEST_FAMILY_BY_KEY = DOMAIN_NAME + "/api/meetings/getMeetingsFree"//免费会见－根据用户名和手机号码查询家属
+    var REQUEST_FAMILY_BY_KEY = DOMAIN_NAME + "/api/meetings/getMeetingsFree"//免费会见－根据用户名和手机号码查询家属
 
-    val REQUEST_FREE_MEETING_TIME = DOMAIN_NAME + "/api/jails/access_times"//免费呼叫次数
-    val UPDATE_FREE_MEETING_TIME = DOMAIN_NAME + "/api/jails/access"//减少呼叫次数
+    var REQUEST_FREE_MEETING_TIME = DOMAIN_NAME + "/api/jails/access_times"//免费呼叫次数
+    var UPDATE_FREE_MEETING_TIME = DOMAIN_NAME + "/api/jails/access"//减少呼叫次数
 
-    val ADD_FREE_MEETING = DOMAIN_NAME + "/api/free_meetings/add"//记录免费会见信息
-    val UPDATE_FREE_MEETING = DOMAIN_NAME + "/api/free_meetings/updateDuration"//更新免费会见时长
-    val UPDATE_MEETING_DURATION = DOMAIN_NAME + "/api/meetings/updateDuration"//更新远程会见时长(该接口已关闭)
+    var ADD_FREE_MEETING = DOMAIN_NAME + "/api/free_meetings/add"//记录免费会见信息
+    var UPDATE_FREE_MEETING = DOMAIN_NAME + "/api/free_meetings/updateDuration"//更新免费会见时长
+    var UPDATE_MEETING_DURATION = DOMAIN_NAME + "/api/meetings/updateDuration"//更新远程会见时长(该接口已关闭)
 
-    val ADD_COMMUNICATE_RECORDS = DOMAIN_NAME + "/api/meetings/addMeetingCallRecords"//新增会见通话记录
-    val UPDATE_COMMUNICATE_RECORDS = DOMAIN_NAME + "/api/meetings/updateMeetingCallRecords"//更新(结束)会见通话记录
+    var ADD_COMMUNICATE_RECORDS = DOMAIN_NAME + "/api/meetings/addMeetingCallRecords"//新增会见通话记录
+    var UPDATE_COMMUNICATE_RECORDS = DOMAIN_NAME + "/api/meetings/updateMeetingCallRecords"//更新(结束)会见通话记录
 
     /*-------------------------------msg what-------------------------------------------------*/
     val START_REFRESH_UI = 1

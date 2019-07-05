@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Prision/Prision.iml" filepath="$PROJECT_DIR$/Prision/Prision.iml" />
       <module fileurl="file://$PROJECT_DIR$/Prision_Android_Kotlin.iml" filepath="$PROJECT_DIR$/Prision_Android_Kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prison_yuwutong.iml" filepath="$PROJECT_DIR$/Prison_yuwutong.iml" />
       <module fileurl="file://$PROJECT_DIR$/auto_espresso/auto_espresso.iml" filepath="$PROJECT_DIR$/auto_espresso/auto_espresso.iml" />
       <module fileurl="file://$PROJECT_DIR$/base_lib_system/base_lib_system.iml" filepath="$PROJECT_DIR$/base_lib_system/base_lib_system.iml" />
     </modules>

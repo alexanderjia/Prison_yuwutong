@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    xmlns:mAttr="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/common_bg_color"
     android:layout_height="match_parent">
@@ -18,7 +19,23 @@
         android:layout_marginLeft="100dip"
         android:layout_marginRight="100dip"
         android:layout_height="wrap_content">
-        <!--spread chain 三个均等面板-->
+        <!--spread chain 四个均等面板-->
+        <ImageView
+            android:id="@+id/network_layout_iv_webset_item"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dip"
+            android:layout_marginLeft="10dip"
+            android:src="@mipmap/check_item_bg"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/network_layout_iv_check_network_item"
+            app:layout_constraintBottom_toBottomOf="@+id/network_layout_v_bottom"
+            app:layout_constraintTop_toTopOf="@+id/network_layout_iv_enable_gui_item"
+            />
+
         <ImageView
             android:id="@+id/network_layout_iv_check_network_item"
             android:layout_width="0dip"
@@ -27,9 +44,8 @@
             android:layout_marginRight="10dip"
             android:layout_marginLeft="10dip"
             android:src="@mipmap/check_item_bg"
-            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/network_layout_iv_webset_item"
             app:layout_constraintBottom_toBottomOf="@+id/network_layout_v_bottom"
             app:layout_constraintRight_toLeftOf="@+id/network_layout_iv_enable_gui_item"
             app:layout_constraintTop_toTopOf="@+id/network_layout_iv_enable_gui_item" />
@@ -72,6 +88,17 @@
             />
         <!--展示项 图标-->
         <ImageView
+            android:id="@+id/network_layout_iv_webset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/network_grey_oval"
+            android:padding="20dip"
+            android:scaleType="center"
+            android:src="@mipmap/websevice_set_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/network_layout_iv_webset_item"
+            app:layout_constraintRight_toRightOf="@+id/network_layout_iv_webset_item"/>
+        <ImageView
             android:id="@+id/network_layout_iv_check_network"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +133,18 @@
             app:layout_constraintLeft_toLeftOf="@+id/network_layout_iv_disable_gui_item"
             app:layout_constraintRight_toRightOf="@+id/network_layout_iv_disable_gui_item" />
         <!--展示项 文字-->
-
+        <TextView
+            android:id="@+id/network_layout_tv_webset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置服务器地址"
+            android:textColor="@color/common_text_color"
+            android:layout_marginTop="50dip"
+            android:textSize="28sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/network_layout_iv_webset"
+            app:layout_constraintLeft_toLeftOf="@+id/network_layout_iv_webset_item"
+            app:layout_constraintRight_toRightOf="@+id/network_layout_iv_webset_item"/>
         <TextView
             android:id="@+id/network_layout_tv_check_network"
             android:layout_width="wrap_content"
@@ -149,6 +187,30 @@
             />
 
         <!--展示项 提示-->
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/network_layout_sp_setweb"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:overlapAnchor="false"
+            android:spinnerMode="dropdown"
+            android:theme="@style/common_spinner"
+            android:entries="@array/set_ip_array"
+            app:layout_constraintTop_toBottomOf="@+id/network_layout_et_setweb"
+            app:layout_constraintLeft_toLeftOf="@+id/network_layout_iv_webset_item"
+            app:layout_constraintRight_toRightOf="@+id/network_layout_iv_webset_item"/>
+        <EditText
+            android:id="@+id/network_layout_et_setweb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginLeft="20dip"
+            app:layout_constraintTop_toBottomOf="@+id/network_layout_tv_webset"
+            app:layout_constraintLeft_toLeftOf="@+id/network_layout_iv_webset_item"
+            app:layout_constraintRight_toRightOf="@+id/network_layout_iv_webset_item"/>
 
         <TextView
             android:id="@+id/network_layout_tv_check_network_hint"
@@ -196,6 +258,26 @@
             app:layout_constraintRight_toRightOf="@+id/network_layout_iv_disable_gui_item"
             />
         <!--展示项 底部按钮-->
+        <TextView
+            android:id="@+id/network_layout_btn_webset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:paddingBottom="10dip"
+            android:paddingRight="30dip"
+            android:paddingLeft="30dip"
+            android:paddingTop="10dip"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:clickable="true"
+            android:onClick="onClickListener"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/network_layout_btn_disable_gui"
+            app:layout_constraintLeft_toLeftOf="@+id/network_layout_iv_webset_item"
+            app:layout_constraintRight_toRightOf="@+id/network_layout_iv_webset_item"
+            android:background="@drawable/check_network_btn_selector"
+            />
         <TextView
             android:id="@+id/network_layout_btn_check_network"
             android:layout_width="wrap_content"

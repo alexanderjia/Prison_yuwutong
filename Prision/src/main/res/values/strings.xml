@@ -143,6 +143,7 @@
     <string name="back">返回</string>
     <string name="check_update">版本更新</string>
     <string name="check_network">检测网络</string>
+    <string name="set_web">设置IP</string>
     <string name="start_gui">启用GUI</string>
     <string name="stop_gui">禁用GUI</string>
     <string name="check">检查</string>
@@ -246,6 +247,10 @@
         <!--<item>2048</item>-->
         <!--<item>4096</item>-->
         <!--<item>8192</item>-->
+    </string-array>
+    <string-array name="set_ip_array">
+        <item>https://www.yuwugongkai.com/ywgk-app</item>
+        <item>http://39.108.185.51:8082/ywgk-app</item>
     </string-array>
 
     <string-array  name="protocol">

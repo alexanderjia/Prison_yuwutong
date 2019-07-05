@@ -163,7 +163,7 @@
             android:textSize="24sp"
             android:drawableTop="@mipmap/setting_check_network"
             android:textColor="@android:color/white"
-            android:text="@string/check_network"
+            android:text="网络设置"
             />
         <TextView
             android:id="@+id/setting_layout_tv_exit"

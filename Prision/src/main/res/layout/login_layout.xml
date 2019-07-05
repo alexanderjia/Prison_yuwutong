@@ -37,7 +37,7 @@
             android:id="@+id/login_layout_tv_check_network_title"
             android:layout_width="wrap_content"
             android:layout_height="70dip"
-            android:text="@string/check_network"
+            android:text="网络设置"
             android:background="@drawable/login_check_bg"
             android:gravity="right|center_vertical"
             android:textColor="@android:color/white"

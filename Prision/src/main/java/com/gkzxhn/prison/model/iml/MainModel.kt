@@ -54,6 +54,8 @@ class MainModel :CallZijingModel(), IMainModel {
      */
     override fun request(date: String,currentPage:Int,pageNumber:Int,  onFinishedListener: VolleyUtils.OnFinishedListener<JSONObject>) {
         val account = sharedPreferences.getString(Constants.USER_ACCOUNT, "")
+        System.out.println("新的地址"+Constants.DOMAIN_NAME)
+        System.out.println("新的地址1"+Constants.REQUEST_MEETING_LIST_URL)
         val url = String.format("%s?terminalNumber=%s&meetingDate=%s&page=%s&rows=%s", Constants.REQUEST_MEETING_LIST_URL, account, date,
                 currentPage,pageNumber)
         try {
