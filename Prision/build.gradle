@@ -8,7 +8,7 @@ android {
         config {
             keyAlias 'gkhn'
             keyPassword '123456'
-            storeFile file('/Users/Raleigh.Luo/Documents/ASWorkspace/GKZX-HN/Prision_Android/Prision/gkprison.jks')
+            storeFile file('/Users/Zhangjia/Desktop/Prison_yuwutong/Prision/gkprison.jks')
             storePassword '123456'
         }
     }
@@ -18,8 +18,8 @@ android {
         applicationId 'com.gkzxhn.prison'
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 22
-        versionName '1.2.2'
+        versionCode 23
+        versionName '1.2.3'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
