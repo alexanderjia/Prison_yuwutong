@@ -1,10 +1,13 @@
 package com.gkzxhn.prison.common
+import com.gkzxhn.prison.BuildConfig
 
 /**
  * Created by Raleigh.Luo on 17/3/29.
  */
 
 object Constants {
+    /* 运营标志*/
+    val Debug = BuildConfig.DEBUG
     /*-------------------------------Config-------------------------------------------------*/
     val CACHE_FILE = GKApplication.instance.filesDir.absolutePath
 
@@ -42,7 +45,8 @@ object Constants {
     var RELEASE_DOMAIN = "https://www.yuwugongkai.com/ywgk-app"//新发布正式环境
     var DEMO_DOMAIN = "http://120.79.251.238:8022/ywgk-app" //"http://120.78.190.101:8084/ywgk-app-demo"//演示环境
     val DEV_DOMAIN = "http://120.78.190.101:8086/ywgk-app-auth"//开发环境
-    var DOMAIN_NAME = DEMO_DOMAIN
+
+    var DOMAIN_NAME = if (Debug) DEMO_DOMAIN else RELEASE_DOMAIN
 
     var REQUEST_MEETING_LIST_URL = DOMAIN_NAME + "/api/meetings/getMeetingsForPrison"//会见列表
     var REQUEST_CANCEL_MEETING_URL = DOMAIN_NAME + "/api/meetings/update"// 取消会见
